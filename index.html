@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body class="light-theme">
+
+    <div class="app-container">
+        <header>
+            <div class="header-top">
+                <h2 id="appTitle">My Tasks</h2>
+                <div class="controls">
+                    <button id="editModeBtn" class="mode-badge" style="display: none;">✏️ Edit</button>
+                    <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+                </div>
+            </div>
+            
+            <div id="inputSection" class="input-card">
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+                    <button id="addTaskBtn" class="action-btn">Add</button>
+                </div>
+                <button id="generateBtn" class="primary-btn" disabled>Generate List</button>
+            </div>
+        </header>
+
+        <main class="list-container">
+            <ul id="todoList">
+                </ul>
+            <div id="emptyState" class="empty-message">No tasks yet. Add one above!</div>
+        </main>
+
+        <footer>
+            <button id="downloadPdfBtn" class="secondary-btn" disabled>Download PDF</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
